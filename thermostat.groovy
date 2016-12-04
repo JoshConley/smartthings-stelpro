@@ -122,6 +122,10 @@ def parse(String description)
     }
   }
 
+  if (map.isStateChange && map.name == "thermostatOperatingState") {
+    map.displayed = false
+  }
+
   log.debug "Parse returned $result"
   result
 }
